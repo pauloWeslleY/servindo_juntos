@@ -36,7 +36,7 @@ const navItems = ['Home', 'Devocional', 'Cadastro', 'Sobre Nos', 'Contatos']
 
 export const NavBar = (props: Props) => {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { window } = props
+  const { window, children } = props
 
   const handleDrawerToggle = useCallback(() => {
     setMobileOpen(prevState => !prevState)
@@ -85,7 +85,7 @@ export const NavBar = (props: Props) => {
           />
         </MenuMobile.Root>
       </nav>
-      <S.Toolbar />
+      {children}
     </S.Container>
   )
 }
