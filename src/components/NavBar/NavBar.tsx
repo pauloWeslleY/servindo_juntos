@@ -1,10 +1,11 @@
-import { ReactElement, cloneElement, useCallback, useState } from 'react'
+import { ReactElement, cloneElement, useState } from 'react'
+import { useScrollTrigger } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { MenuMobile } from '../MenuMobile'
 import * as S from './styles'
-import { useScrollTrigger } from '@mui/material'
+import { NavLink } from './NavLink'
 
 type Props = {
   /**
@@ -32,17 +33,21 @@ const ElevationScroll = (props: Props) => {
   })
 }
 
-const navItems = ['Home', 'Devocional', 'Cadastro', 'Sobre Nos', 'Contatos']
+const navItems = [
+  { text: 'Home', path: '/' },
+  { text: 'Devocional', path: '/devotional' },
+  { text: 'Cadastro', path: '/register' },
+  { text: 'Sobre Nos', path: '/about' },
+  { text: 'Contatos', path: '/contact' },
+]
 
 export const NavBar = (props: Props) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const { window, children } = props
 
-  const handleDrawerToggle = useCallback(() => {
+  const handleDrawerToggle = () => {
     setMobileOpen(prevState => !prevState)
-    console.log('clicked')
-    console.log('isOpen', mobileOpen)
-  }, [mobileOpen])
+  }
 
   const container =
     window !== undefined ? () => window().document.body : undefined
@@ -67,7 +72,7 @@ export const NavBar = (props: Props) => {
             </S.AppBarTitle>
             <S.NavWrapper>
               {navItems.map(item => (
-                <S.NavLink key={item}>{item}</S.NavLink>
+                <NavLink key={item.path} props={item} />
               ))}
             </S.NavWrapper>
           </S.Toolbar>

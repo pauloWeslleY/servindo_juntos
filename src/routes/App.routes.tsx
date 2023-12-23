@@ -11,5 +11,21 @@ export const AppRoutes: RouteObject = {
       path: '/',
       element: <Home />,
     },
+    {
+      path: '/devotional',
+      element: <h1>Devocional</h1>,
+    },
+    {
+      path: '/register',
+      element: <h1>Cadastro</h1>,
+    },
+    {
+      path: '/about',
+      element: <h1>Sobre Nos</h1>,
+    },
+    {
+      path: '/contact',
+      element: <h1>Contatos</h1>,
+    },
   ],
 }

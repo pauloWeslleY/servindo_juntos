@@ -4,7 +4,10 @@ import * as S from './styles'
 type MenuMobileContentProps = ComponentProps<typeof S.Container> & {
   props: {
     label: string
-    navItems: Array<string>
+    navItems: {
+      text: string
+      path: string
+    }[]
   }
 }
 
@@ -20,7 +23,7 @@ const MenuMobileContent = ({ props, ...rest }: MenuMobileContentProps) => {
         {navItems.map((item, index) => (
           <S.MenuListItem key={index} disablePadding>
             <S.MenuListItemButton>
-              <S.MenuListItemText primary={item} />
+              <S.MenuListItemText primary={item.text} />
             </S.MenuListItemButton>
           </S.MenuListItem>
         ))}

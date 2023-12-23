@@ -17,12 +17,28 @@ export const Container = styled('div')(({ theme }) => ({
   gap: theme.spacing(2.8),
 
   paddingInline: theme.spacing(15),
+
+  [theme.breakpoints.down('xs')]: {
+    flexDirection: 'column',
+    gap: theme.spacing(1.5),
+    height: theme.spacing(40),
+    paddingInline: 0,
+
+    '& > div': {
+      textAlign: 'center',
+    },
+  },
 }))
 
 export const BannerTitle = styled(MuiTypography)<MuiTypographyProps>(
   ({ theme }) => ({
     fontSize: theme.spacing(5),
     color: theme.palette.primary.contrastText,
+
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center',
+      fontSize: theme.spacing(2.3),
+    },
   })
 )
 
@@ -31,5 +47,11 @@ export const BannerSubTitle = styled(MuiTypography)<MuiTypographyProps>(
     fontSize: theme.spacing(1.5),
     color: theme.palette.primary.contrastText,
     marginBottom: theme.spacing(1),
+
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center',
+      fontSize: theme.spacing(0.97),
+      paddingInline: theme.spacing(1.5),
+    },
   })
 )

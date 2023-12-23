@@ -23,6 +23,10 @@ export const FooterBar = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+
+  [theme.breakpoints.up('xs')]: {
+    justifyContent: 'space-around',
+  },
 }))
 
 export const MenuWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
@@ -31,6 +35,14 @@ export const MenuWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
 
   marginInline: theme.spacing(12),
   padding: theme.spacing(2, 3),
+
+  [theme.breakpoints.down('xs')]: {
+    alignItems: 'center',
+    flexDirection: 'column',
+
+    gap: theme.spacing(0.95),
+    marginInline: theme.spacing(0),
+  },
 }))
 
 export const FooterMenu = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
@@ -38,6 +50,18 @@ export const FooterMenu = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   gap: theme.spacing(1.5),
 
   listStyle: 'none',
+
+  [theme.breakpoints.down('xs')]: {
+    flexDirection: 'column',
+
+    gap: theme.spacing(0.9),
+    marginBottom: theme.spacing(0.8),
+
+    '& > li': {
+      textAlign: 'center',
+      fontWeight: theme.typography.fontWeightBold,
+    },
+  },
 }))
 
 export const FooterTitle = styled(MuiTypography)<MuiTypographyProps>(

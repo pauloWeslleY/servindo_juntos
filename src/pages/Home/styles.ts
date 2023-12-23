@@ -12,6 +12,12 @@ export const Wrapper = styled(MuiStack)<MuiStackProps>(({ theme }) => ({
 
   paddingInline: theme.spacing(15),
   paddingBlock: theme.spacing(2),
+
+  [theme.breakpoints.down('xs')]: {
+    flexDirection: 'column',
+
+    paddingInline: theme.spacing(1.2),
+  },
 }))
 
 export const Content = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
@@ -20,6 +26,10 @@ export const Content = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   '& > span': {
     fontSize: theme.spacing(1.3),
     fontWeight: theme.typography.fontWeightLight,
+  },
+
+  [theme.breakpoints.down('xs')]: {
+    textAlign: 'center',
   },
 }))
 
