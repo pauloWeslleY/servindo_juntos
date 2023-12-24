@@ -1,4 +1,5 @@
 import { HomeLayout } from '@/Layout/HomeLayout'
+import { Devotional } from '@/pages/Devotional'
 import { Home } from '@/pages/Home'
 import { RouteObject } from 'react-router-dom'
 
@@ -13,7 +14,7 @@ export const AppRoutes: RouteObject = {
     },
     {
       path: '/devotional',
-      element: <h1>Devocional</h1>,
+      element: <Devotional />,
     },
     {
       path: '/register',

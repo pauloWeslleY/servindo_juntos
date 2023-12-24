@@ -24,7 +24,7 @@ export const FooterBar = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
 
-  [theme.breakpoints.up('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     justifyContent: 'space-around',
   },
 }))
@@ -36,7 +36,7 @@ export const MenuWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   marginInline: theme.spacing(12),
   padding: theme.spacing(2, 3),
 
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     alignItems: 'center',
     flexDirection: 'column',
 
@@ -51,7 +51,7 @@ export const FooterMenu = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
 
   listStyle: 'none',
 
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
 
     gap: theme.spacing(0.9),
