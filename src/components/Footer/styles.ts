@@ -37,7 +37,7 @@ export const MenuWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   marginInline: theme.spacing(12),
   padding: theme.spacing(2, 3),
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     alignItems: 'center',
     flexDirection: 'column',
 

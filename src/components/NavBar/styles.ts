@@ -30,6 +30,9 @@ export const AppBarTitle = styled(MuiTypography)<MuiTypographyProps>(
     },
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+    },
+    [theme.breakpoints.down('md')]: {
+      display: 'block',
       textAlign: 'center',
     },
   })

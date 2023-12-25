@@ -3,6 +3,7 @@ import { HomeLayout } from '@/Layout/HomeLayout'
 import { Home } from '@/pages/Home'
 import { SignUp } from '@/pages/SignUp'
 import { Devotional } from '@/pages/Devotional'
+import { About } from '@/pages/About'
 
 export const AppRoutes: RouteObject = {
   path: '/',
@@ -18,16 +19,12 @@ export const AppRoutes: RouteObject = {
       element: <Devotional />,
     },
     {
-      path: '/register',
+      path: '/contact',
       element: <SignUp />,
     },
     {
       path: '/about',
-      element: <h1>Sobre Nos</h1>,
-    },
-    {
-      path: '/contact',
-      element: <h1>Contatos</h1>,
+      element: <About />,
     },
   ],
 }

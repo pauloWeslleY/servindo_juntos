@@ -43,7 +43,7 @@ export const Separator = styled(MuiDivider)<MuiDividerProps>(({ theme }) => ({
   borderColor: theme.palette.primary.contrastText,
   width: theme.spacing(10.5),
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     width: '100%',
   },
 }))
@@ -78,7 +78,7 @@ export const Section = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
     letterSpacing: theme.spacing(0.025),
   },
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     height: 'auto',
     padding: theme.spacing(2.5, 1.5),
 

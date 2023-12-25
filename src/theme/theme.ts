@@ -27,5 +27,8 @@ export const theme = createTheme({
     body2: {
       fontFamily: "'Petit Formal Script', cursive",
     },
+    button: {
+      fontWeight: 600,
+    },
   },
 })
