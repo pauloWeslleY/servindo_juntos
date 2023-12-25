@@ -1,7 +1,8 @@
-import { HomeLayout } from '@/Layout/HomeLayout'
-import { Devotional } from '@/pages/Devotional'
-import { Home } from '@/pages/Home'
 import { RouteObject } from 'react-router-dom'
+import { HomeLayout } from '@/Layout/HomeLayout'
+import { Home } from '@/pages/Home'
+import { SignUp } from '@/pages/SignUp'
+import { Devotional } from '@/pages/Devotional'
 
 export const AppRoutes: RouteObject = {
   path: '/',
@@ -18,7 +19,7 @@ export const AppRoutes: RouteObject = {
     },
     {
       path: '/register',
-      element: <h1>Cadastro</h1>,
+      element: <SignUp />,
     },
     {
       path: '/about',

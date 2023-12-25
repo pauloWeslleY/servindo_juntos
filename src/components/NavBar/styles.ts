@@ -42,14 +42,12 @@ export const NavWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   },
 }))
 
-type NavLinkType = MuiButtonProps & { isActive?: 'true' | 'false' }
+type NavLinkType = MuiButtonProps & { active?: 'true' | 'false' }
 
-export const NavLink = styled(MuiButton)<NavLinkType>(
-  ({ theme, isActive }) => ({
-    color: isActive === 'true' ? grey[800] : theme.palette.primary.contrastText,
-    fontWeight:
-      isActive === 'true'
-        ? theme.typography.fontWeightBold
-        : theme.typography.fontWeightRegular,
-  })
-)
+export const NavLink = styled(MuiButton)<NavLinkType>(({ theme, active }) => ({
+  color: active === 'true' ? grey[800] : theme.palette.primary.contrastText,
+  fontWeight:
+    active === 'true'
+      ? theme.typography.fontWeightBold
+      : theme.typography.fontWeightRegular,
+}))

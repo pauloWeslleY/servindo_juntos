@@ -1,3 +1,4 @@
+import { InputField } from '@/components/InputField/InputField'
 import * as S from './styles'
 
 export const FormRegister = () => {
@@ -13,10 +14,7 @@ export const FormRegister = () => {
         </S.Head>
 
         <form>
-          <S.InputField
-            variant="outlined"
-            label="Insira seu endereço de email"
-          />
+          <InputField variant="outlined" label="Insira seu endereço de email" />
 
           <div>
             <S.Button variant="contained" color="secondary">

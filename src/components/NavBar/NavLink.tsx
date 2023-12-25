@@ -24,7 +24,7 @@ export const NavLink = ({ props, ...rest }: NavLinkProps) => {
       onClick={link}
       color={isActive}
       variant={isActiveLink}
-      isActive={isActiveText}
+      active={isActiveText}
     >
       {props.text}
     </S.NavLink>
