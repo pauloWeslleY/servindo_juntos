@@ -24,11 +24,13 @@ export const AppBarTitle = styled(MuiTypography)<MuiTypographyProps>(
   ({ theme }) => ({
     flexGrow: 1,
     fontSize: theme.spacing(2),
+
     [theme.breakpoints.up('xs')]: {
       display: 'none',
     },
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      textAlign: 'center',
     },
   })
 )
@@ -37,7 +39,7 @@ export const NavWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   [theme.breakpoints.up('xs')]: {
     display: 'none',
   },
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('md')]: {
     display: 'block',
   },
 }))

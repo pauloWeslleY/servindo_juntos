@@ -18,6 +18,13 @@ export const Wrapper = styled(MuiStack)<MuiStackProps>(({ theme }) => ({
 
     paddingInline: theme.spacing(1.2),
   },
+
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+    textAlign: 'center',
+
+    paddingInline: theme.spacing(1.5),
+  },
 }))
 
 export const Content = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({

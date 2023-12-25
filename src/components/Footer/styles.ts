@@ -1,4 +1,6 @@
+import { Link, LinkProps } from 'react-router-dom'
 import { styled } from '@mui/material/styles'
+import { grey } from '@mui/material/colors'
 import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
 import MuiDivider, {
   DividerProps as MuiDividerProps,
@@ -7,7 +9,6 @@ import MuiTypography, {
   TypographyProps as MuiTypographyProps,
 } from '@mui/material/Typography'
 import MuiGrid, { GridProps as MuiGridProps } from '@mui/material/Grid'
-import { grey } from '@mui/material/colors'
 
 export const Footer = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   background: theme.palette.primary.contrastText,
@@ -51,7 +52,7 @@ export const FooterMenu = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
 
   listStyle: 'none',
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
 
     gap: theme.spacing(0.9),
@@ -61,6 +62,19 @@ export const FooterMenu = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
       textAlign: 'center',
       fontWeight: theme.typography.fontWeightBold,
     },
+  },
+}))
+
+export const FooterLink = styled(MuiBox)<MuiBoxProps>(() => ({}))
+
+export const MenuLink = styled(Link)<LinkProps>(({ theme }) => ({
+  fontWeight: theme.typography.fontWeightBold,
+  color: grey[800],
+
+  transition: '.2s ease',
+
+  '&:hover': {
+    color: theme.palette.secondary.main,
   },
 }))
 

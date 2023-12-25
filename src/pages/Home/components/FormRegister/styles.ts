@@ -22,6 +22,10 @@ export const Container = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     paddingInline: theme.spacing(0.75),
   },
+
+  [theme.breakpoints.down('md')]: {
+    paddingInline: theme.spacing(1.75),
+  },
 }))
 
 export const FormWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
@@ -42,7 +46,7 @@ export const FormWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
     fontSize: theme.spacing(0.9),
   },
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     textAlign: 'center',
   },
 }))
@@ -53,7 +57,7 @@ export const Head = styled(MuiStack)<MuiStackProps>(({ theme }) => ({
     color: theme.palette.primary.contrastText,
   },
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     alignItems: 'center',
   },
 }))

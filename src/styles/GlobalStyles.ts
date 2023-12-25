@@ -5,6 +5,7 @@ export default {
     boxSizing: 'border-box',
     margin: 0,
     padding: 0,
+    textDecoration: 'none',
 
     '::-webkit-scrollbar': {
       width: '0.65rem',

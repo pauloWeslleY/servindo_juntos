@@ -4,8 +4,9 @@ import CssBaseline from '@mui/material/CssBaseline'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { MenuMobile } from '../MenuMobile'
-import * as S from './styles'
 import { NavLink } from './NavLink'
+import navItems from '@/routes/links'
+import * as S from './styles'
 
 type Props = {
   /**
@@ -33,14 +34,6 @@ const ElevationScroll = (props: Props) => {
   })
 }
 
-const navItems = [
-  { text: 'Home', path: '/' },
-  { text: 'Devocional', path: '/devotional' },
-  { text: 'Cadastro', path: '/register' },
-  { text: 'Sobre Nos', path: '/about' },
-  { text: 'Contatos', path: '/contact' },
-]
-
 export const NavBar = (props: Props) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const { window, children } = props
@@ -63,7 +56,7 @@ export const NavBar = (props: Props) => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+              sx={{ mr: 2, display: { md: 'none' } }}
             >
               <MenuIcon />
             </IconButton>

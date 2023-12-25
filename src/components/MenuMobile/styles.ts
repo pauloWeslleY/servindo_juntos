@@ -28,11 +28,14 @@ export const MenuMobileWrapper = styled(MuiDrawer)<MuiDrawerProps>(
       color: theme.palette.primary.contrastText,
     },
 
-    [theme.breakpoints.up('xs')]: {
+    [theme.breakpoints.up('sm')]: {
       display: 'block',
+      '& .MuiDrawer-paper': {
+        width: theme.spacing(25),
+      },
     },
 
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
   })

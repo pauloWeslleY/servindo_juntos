@@ -1,8 +1,8 @@
+import { FooterLink } from './FooterLink'
+import footerLinks from '@/routes/links'
 import * as S from './styles'
 
-type TitleProps = {
-  text: string
-}
+type TitleProps = { text: string }
 
 const Title = ({ text }: TitleProps) => (
   <S.FooterTitle component="h3" variant="body2">
@@ -16,11 +16,9 @@ export const Footer = () => {
       <S.Footer component="footer">
         <S.MenuWrapper>
           <S.FooterMenu component="ul">
-            <li>Home</li>
-            <li>Devocional</li>
-            <li>Cadastro</li>
-            <li>Sobre Nos</li>
-            <li>Contatos</li>
+            {footerLinks.map(props => (
+              <FooterLink key={props.path} component="li" props={props} />
+            ))}
           </S.FooterMenu>
 
           <Title text="Servindo Juntos" />
