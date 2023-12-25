@@ -4,7 +4,7 @@ import { Form } from './components/Form'
 
 import * as S from './styles'
 
-export const SignUp = () => {
+export const Contact = () => {
   const theme = useMuiTheme()
 
   return (

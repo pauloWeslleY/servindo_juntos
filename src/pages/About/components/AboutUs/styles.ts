@@ -26,6 +26,7 @@ export const Content = styled(MuiGrid)<MuiGridProps>(({ theme }) => ({
     height: 'auto',
 
     borderRadius: theme.spacing(0.65),
+    boxShadow: theme.shadows[10],
   },
 
   '& div:nth-child(3)': {

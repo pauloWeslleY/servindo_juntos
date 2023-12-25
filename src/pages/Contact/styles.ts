@@ -9,7 +9,7 @@ import MuiTypography, {
 } from '@mui/material/Typography'
 
 export const Container = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
-  background: theme.palette.primary.light,
+  background: theme.palette.primary.main,
 }))
 
 export const Wrap = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({

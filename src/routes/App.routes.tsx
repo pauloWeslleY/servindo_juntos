@@ -1,7 +1,7 @@
 import { RouteObject } from 'react-router-dom'
-import { HomeLayout } from '@/Layout/HomeLayout'
+import { HomeLayout } from '@/layout/HomeLayout'
 import { Home } from '@/pages/Home'
-import { SignUp } from '@/pages/SignUp'
+import { Contact } from '@/pages/Contact'
 import { Devotional } from '@/pages/Devotional'
 import { About } from '@/pages/About'
 
@@ -20,7 +20,7 @@ export const AppRoutes: RouteObject = {
     },
     {
       path: '/contact',
-      element: <SignUp />,
+      element: <Contact />,
     },
     {
       path: '/about',
