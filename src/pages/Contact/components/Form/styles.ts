@@ -1,5 +1,5 @@
-import { SxProps, styled } from '@mui/material/styles'
-import { blue, grey } from '@mui/material/colors'
+import { styled } from '@mui/material/styles'
+import { blue, grey, red } from '@mui/material/colors'
 import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
 import MuiCheckbox, {
   CheckboxProps as MuiCheckboxProps,
@@ -7,6 +7,8 @@ import MuiCheckbox, {
 import MuiFormControlLabel, {
   FormControlLabelProps as MuiFormControlLabelProps,
 } from '@mui/material/FormControlLabel'
+
+type ErrorsProps = { error: string | undefined }
 
 export const Form = styled('form')(({ theme }) => ({
   marginInline: theme.spacing(16.75),
@@ -38,26 +40,45 @@ export const Wrap = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   },
 }))
 
-export const TextArea = styled('textarea')(({ theme }) => ({
-  background: 'transparent',
+type HelperTextProps = { text: string | undefined }
 
-  padding: theme.spacing(0.75),
-  borderRadius: theme.spacing(0.2),
-  outline: `${theme.spacing(0.105)} solid ${grey[600]}`,
+export const HelperText = styled('span')<HelperTextProps>(
+  ({ theme, text }) => ({
+    ...theme.typography.subtitle1,
+    color: text === '' ? grey[500] : red[600],
+  })
+)
 
-  resize: 'none',
+type TextAreaProps = ErrorsProps
 
-  color: grey[400],
-  fontSize: theme.spacing(1.2),
-  fontWeight: theme.typography.fontWeightMedium,
+export const TextArea = styled('textarea')<TextAreaProps>(
+  ({ theme, error }) => ({
+    background: 'transparent',
 
-  height: theme.spacing(16.2),
-  overflow: 'hidden',
+    padding: theme.spacing(0.75),
+    borderRadius: theme.spacing(0.2),
+    border:
+      error === undefined
+        ? `${theme.spacing(0.185)} solid ${grey[600]}`
+        : `${theme.spacing(0.185)} solid ${red[600]}`,
 
-  '&::placeholder': {
-    fontSize: theme.spacing(1.35),
-  },
-}))
+    resize: 'none',
+    outline: 'none',
+
+    color: error === undefined ? grey[400] : red[600],
+    fontSize: theme.spacing(1.2),
+    fontWeight: theme.typography.fontWeightBold,
+
+    height: theme.spacing(16.2),
+    overflow: 'hidden',
+
+    '&::placeholder': {
+      color: error === undefined ? grey[600] : red[600],
+      fontSize: theme.spacing(1.25),
+      fontWeight: theme.typography.fontWeightMedium,
+    },
+  })
+)
 
 export const FormActions = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   display: 'flex',
@@ -73,27 +94,25 @@ export const FormActions = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   },
 }))
 
-export const FormControlLabel = styled(
-  MuiFormControlLabel
-)<MuiFormControlLabelProps>(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
+type FormControlProps = MuiFormControlLabelProps & ErrorsProps
 
-  marginBottom: theme.spacing(0.55),
+export const FormControl = styled(MuiFormControlLabel)<FormControlProps>(
+  ({ theme, error }) => ({
+    display: 'flex',
+    alignItems: 'center',
 
-  color: grey[100],
-}))
+    marginBottom: theme.spacing(0.55),
 
-export const Checkbox = styled(MuiCheckbox)<MuiCheckboxProps>(() => ({
-  color: grey[100],
+    color: error === undefined ? grey[100] : red[600],
+  })
+)
+
+type CheckboxProps = MuiCheckboxProps & ErrorsProps
+
+export const Checkbox = styled(MuiCheckbox)<CheckboxProps>(({ error }) => ({
+  color: error === undefined ? grey[100] : red[600],
 
   '&.Mui-checked': {
     color: blue[600],
   },
 }))
-
-export const ButtonSubmit: SxProps = {
-  padding: '.7rem',
-  fontWeight: 'bold',
-  color: grey[900],
-}

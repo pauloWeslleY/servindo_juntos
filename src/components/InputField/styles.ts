@@ -60,4 +60,10 @@ export const Input = styled(MuiTextField)<MuiTextFieldProps>(({ theme }) => ({
       },
     },
   },
+
+  '& .MuiFormHelperText-root': {
+    ...theme.typography.subtitle2,
+    fontSize: theme.spacing(1),
+    color: red[600],
+  },
 }))
