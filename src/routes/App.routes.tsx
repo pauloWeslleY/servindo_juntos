@@ -12,6 +12,7 @@ export const AppRoutes: RouteObject = {
   children: [
     {
       path: '/',
+      index: true,
       element: <Home />,
     },
     {
