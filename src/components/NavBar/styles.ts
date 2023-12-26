@@ -8,6 +8,7 @@ import MuiTypography, {
 import MuiToolbar, {
   ToolbarProps as MuiToolbarProps,
 } from '@mui/material/Toolbar'
+import { grey } from '@mui/material/colors'
 
 export const AppBar = styled(MuiAppBar)<MuiAppBarProps>(({ theme }) => ({
   padding: theme.spacing(0.5, 0),
@@ -23,11 +24,16 @@ export const AppBarTitle = styled(MuiTypography)<MuiTypographyProps>(
   ({ theme }) => ({
     flexGrow: 1,
     fontSize: theme.spacing(2),
+
     [theme.breakpoints.up('xs')]: {
       display: 'none',
     },
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+    },
+    [theme.breakpoints.down('md')]: {
+      display: 'block',
+      textAlign: 'center',
     },
   })
 )
@@ -36,11 +42,17 @@ export const NavWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   [theme.breakpoints.up('xs')]: {
     display: 'none',
   },
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('md')]: {
     display: 'block',
   },
 }))
 
-export const NavLink = styled(MuiButton)<MuiButtonProps>(({ theme }) => ({
-  color: theme.palette.primary.contrastText,
+type NavLinkType = MuiButtonProps & { active?: 'true' | 'false' }
+
+export const NavLink = styled(MuiButton)<NavLinkType>(({ theme, active }) => ({
+  color: active === 'true' ? grey[800] : theme.palette.primary.contrastText,
+  fontWeight:
+    active === 'true'
+      ? theme.typography.fontWeightBold
+      : theme.typography.fontWeightRegular,
 }))

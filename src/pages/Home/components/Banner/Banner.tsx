@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button } from '@/components/Button'
 import * as S from './styles'
 
 export const Banner = () => {
@@ -11,9 +11,7 @@ export const Banner = () => {
           Bem vindo ao mais novo site de relacionamento cristão Em breve nessa
           pagina voce desfrutara de uma nova experiencia!
         </S.BannerSubTitle>
-        <Button color="secondary" variant="contained">
-          Conte-nos mais
-        </Button>
+        <Button label="Conte-nos mais" color="secondary" variant="contained" />
       </div>
     </S.Container>
   )
