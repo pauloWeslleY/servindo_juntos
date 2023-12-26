@@ -1,14 +1,13 @@
 import { Outlet } from 'react-router-dom'
 import { NavBar } from '@/components/NavBar'
 import { Footer } from '@/components/Footer'
+import { Toolbar } from './styles'
 
-import * as S from './styles'
-
-export const HomeLayout = () => {
+export const Layout = () => {
   return (
     <div>
       <NavBar>
-        <S.Toolbar />
+        <Toolbar />
       </NavBar>
 
       <Outlet />
