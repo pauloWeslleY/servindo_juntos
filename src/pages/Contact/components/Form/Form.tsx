@@ -25,8 +25,6 @@ export const Form = ({ ...props }: FormProps) => {
   })
   const theme = useMuiTheme()
 
-  console.log(errors)
-
   const createContact = (data: SchemaFormContactProps) => {
     console.log({ data })
   }
