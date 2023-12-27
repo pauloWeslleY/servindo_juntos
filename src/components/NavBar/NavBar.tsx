@@ -60,7 +60,7 @@ export const NavBar = (props: Props) => {
             >
               <MenuIcon />
             </IconButton>
-            <S.AppBarTitle variant="body2" component="div">
+            <S.AppBarTitle variant="body2" component="h1">
               servindojuntos
             </S.AppBarTitle>
             <S.NavWrapper>
