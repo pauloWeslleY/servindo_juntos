@@ -8,7 +8,6 @@ import MuiTypography, {
 import MuiToolbar, {
   ToolbarProps as MuiToolbarProps,
 } from '@mui/material/Toolbar'
-import { grey } from '@mui/material/colors'
 
 export const AppBar = styled(MuiAppBar)<MuiAppBarProps>(({ theme }) => ({
   padding: theme.spacing(0.5, 0),
@@ -50,7 +49,10 @@ export const NavWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
 type NavLinkType = MuiButtonProps & { active?: 'true' | 'false' }
 
 export const NavLink = styled(MuiButton)<NavLinkType>(({ theme, active }) => ({
-  color: active === 'true' ? grey[800] : theme.palette.primary.contrastText,
+  color:
+    active === 'true'
+      ? theme.palette.secondary.main
+      : theme.palette.primary.contrastText,
   fontWeight:
     active === 'true'
       ? theme.typography.fontWeightBold
