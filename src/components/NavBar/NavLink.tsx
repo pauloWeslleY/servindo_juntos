@@ -13,7 +13,7 @@ export const NavLink = ({ props, ...rest }: NavLinkProps) => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const isActive = pathname === props.path ? 'secondary' : 'inherit'
-  const isActiveLink = pathname === props.path ? 'contained' : 'text'
+  const isActiveLink = pathname === props.path ? 'outlined' : 'text'
   const isActiveText = pathname === props.path ? 'true' : 'false'
 
   const link = () => navigate(props.path)
