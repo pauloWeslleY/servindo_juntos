@@ -43,12 +43,11 @@ export const Container = styled('div')(({ theme }) => ({
 
 export const BannerTitle = styled(MuiTypography)<MuiTypographyProps>(
   ({ theme }) => ({
-    fontSize: theme.spacing(5),
     color: theme.palette.primary.contrastText,
 
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
-      fontSize: theme.spacing(2.3),
+      // fontSize: FONTS.fontSizes['4xl'],
       paddingInline: theme.spacing(1),
     },
   }),

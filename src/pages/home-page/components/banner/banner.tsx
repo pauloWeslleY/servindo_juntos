@@ -3,7 +3,7 @@ import * as S from './banner-styles'
 
 export const Banner = () => (
   <S.Container>
-    <S.BannerTitle variant="body2">Bem-vindo a Servindo Juntos</S.BannerTitle>
+    <S.BannerTitle variant="h1">Bem-vindo a Servindo Juntos</S.BannerTitle>
 
     <div>
       <S.BannerSubTitle>

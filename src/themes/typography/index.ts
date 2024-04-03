@@ -13,7 +13,7 @@ export const Typography = ({ font }: TypographyProps): TypographyOptions => ({
   h1: {
     fontFamily: FONTS.fontFamily.PETIT,
     fontWeight: FONTS.fontWeight.semibold,
-    fontSize: FONTS.fontSizes['4xl'],
+    fontSize: FONTS.fontSizes['7xl'],
     lineHeight: 1.21,
   },
   h2: {
