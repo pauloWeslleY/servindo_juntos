@@ -16,9 +16,9 @@ import { COLORS, FONTS } from '@/styles'
 import * as S from './nav-bar-styles'
 
 export const NavBar = (props: Props) => {
-  const { window, children } = props
+  const { windows, children } = props
   const { container, mobileOpen, handleDrawerToggle, routesLinks } = useNavBar({
-    window,
+    windows,
   })
 
   return (
@@ -63,7 +63,9 @@ export const NavBar = (props: Props) => {
               ))}
               <Button
                 variant="primary"
-                href="https://unidos-com-cristo.vercel.app"
+                onClick={() =>
+                  window.open('https://unidos-com-cristo.vercel.app', '_blank')
+                }
                 startIcon={<AccountCircleRoundedIcon />}
                 sx={{
                   '&.MuiButton-primary': { fontWeight: FONTS.fontWeight.bold },

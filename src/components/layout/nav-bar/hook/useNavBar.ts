@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRoutesLink } from '@/hooks/useRoutesLink'
 
-const useNavBar = ({ window }: { window?: () => Window }) => {
+const useNavBar = ({ windows }: { windows?: () => Window }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const { routesLinks } = useRoutesLink()
 
@@ -10,7 +10,7 @@ const useNavBar = ({ window }: { window?: () => Window }) => {
   }
 
   const container =
-    window !== undefined ? () => window().document.body : undefined
+    windows !== undefined ? () => windows().document.body : undefined
 
   return {
     mobileOpen,
