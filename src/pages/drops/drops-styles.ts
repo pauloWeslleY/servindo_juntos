@@ -1,8 +1,7 @@
 import { styled } from '@mui/material'
-import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
 import { COLORS } from '@/styles'
 
-export const Wrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const Wrapper = styled('main')(({ theme }) => ({
   background: theme.palette.primary.light,
   padding: theme.spacing(5),
 

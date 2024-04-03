@@ -1,14 +1,8 @@
 import { styled } from '@mui/material'
-import { grey, red } from '@mui/material/colors'
-import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
+import { red } from '@mui/material/colors'
 import MuiCheckbox from '@mui/material/Checkbox'
 import MuiFormControlLabel from '@mui/material/FormControlLabel'
-import {
-  FormControlProps,
-  HelperTextProps,
-  TextAreaProps,
-  CheckboxProps,
-} from './form-props'
+import { FormControlProps, CheckboxProps } from './form-props'
 import { COLORS } from '@/styles'
 
 export const Form = styled('form')(({ theme }) => ({
@@ -24,7 +18,7 @@ export const Form = styled('form')(({ theme }) => ({
   },
 }))
 
-export const Wrap = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const Wrap = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   columnGap: theme.spacing(2),
@@ -41,43 +35,7 @@ export const Wrap = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   },
 }))
 
-export const HelperText = styled('span')<HelperTextProps>(
-  ({ theme, text }) => ({
-    ...theme.typography.subtitle1,
-    color: text === '' ? grey[500] : red[600],
-  }),
-)
-
-export const TextArea = styled('textarea')<TextAreaProps>(
-  ({ theme, error }) => ({
-    background: 'transparent',
-
-    padding: theme.spacing(0.75),
-    borderRadius: theme.spacing(1),
-    border:
-      error === undefined
-        ? `${theme.spacing(0.185)} solid ${grey[600]}`
-        : `${theme.spacing(0.185)} solid ${red[600]}`,
-
-    resize: 'none',
-    outline: 'none',
-
-    color: error === undefined ? grey[400] : red[600],
-    fontSize: theme.spacing(1.2),
-    fontWeight: theme.typography.fontWeightBold,
-
-    height: theme.spacing(16.2),
-    overflow: 'hidden',
-
-    '&::placeholder': {
-      color: error === undefined ? grey[600] : red[600],
-      fontSize: theme.spacing(1.25),
-      fontWeight: theme.typography.fontWeightMedium,
-    },
-  }),
-)
-
-export const FormActions = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const FormActions = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
 

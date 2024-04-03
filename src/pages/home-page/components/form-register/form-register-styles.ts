@@ -1,10 +1,9 @@
 import { darken, styled } from '@mui/material/styles'
-import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
 import MuiStack, { StackProps as MuiStackProps } from '@mui/material/Stack'
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded'
 import { COLORS } from '@/styles'
 
-export const Container = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const Container = styled('div')(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -22,7 +21,7 @@ export const Container = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   },
 }))
 
-export const FormWrapper = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const FormWrapper = styled('div')(({ theme }) => ({
   background: darken(theme.palette.primary.light, 0.2),
   padding: theme.spacing(2),
   borderRadius: theme.spacing(1.5),

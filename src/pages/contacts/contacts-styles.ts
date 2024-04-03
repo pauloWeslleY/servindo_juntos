@@ -1,9 +1,8 @@
 import { styled } from '@mui/material'
 import { grey } from '@mui/material/colors'
-import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
 import { COLORS } from '@/styles'
 
-export const Wrap = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const Wrap = styled('div')(({ theme }) => ({
   '& > header': {
     padding: theme.spacing(4.75, 1.75, 1.75, 1.75),
     marginInline: theme.spacing(15),
@@ -21,7 +20,7 @@ export const Wrap = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
   },
 }))
 
-export const Section = styled(MuiBox)<MuiBoxProps>(({ theme }) => ({
+export const Container = styled('div')(({ theme }) => ({
   background:
     'linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.2)), url("/image/banner.jpeg")',
   backgroundSize: 'cover',

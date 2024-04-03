@@ -11,7 +11,7 @@ export const Contact = () => {
       component="main"
       sx={{ bgcolor: (theme) => theme.palette.primary.light }}
     >
-      <S.Wrap component="div">
+      <S.Wrap>
         <header>
           <Typography
             variant="h2"
@@ -31,7 +31,7 @@ export const Contact = () => {
 
       <Form />
 
-      <S.Section>
+      <S.Container>
         <section>
           <span>Fale de você ou de sua empresa aqui.</span>
           <Typography
@@ -68,7 +68,7 @@ export const Contact = () => {
             Conte-nos mais
           </Button>
         </div>
-      </S.Section>
+      </S.Container>
     </Box>
   )
 }

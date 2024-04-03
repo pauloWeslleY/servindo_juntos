@@ -4,7 +4,7 @@ import * as S from './drops-styles'
 
 export const Gotas = () => {
   return (
-    <S.Wrapper component="main">
+    <S.Wrapper>
       <div>
         <Typography
           component="h2"
