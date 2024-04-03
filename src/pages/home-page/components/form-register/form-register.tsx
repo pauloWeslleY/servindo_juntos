@@ -15,11 +15,10 @@ export const FormRegister = () => {
           <S.EmailIcon />
           <Typography
             component="h3"
-            variant="body2"
+            variant="h2"
             sx={(theme) => ({
               fontSize: theme.spacing(2.4),
               color: COLORS.zinc[700],
-
               marginBlock: theme.spacing(0.7),
             })}
           >
