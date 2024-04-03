@@ -1,8 +1,11 @@
-import { MappedRoutes } from './routes/routes'
-import { ScrollTop } from './components/ScrollTop'
+import { MappedRoutes } from './routes'
+import { ScrollTop } from './components/scroll-top'
+import { ThemeCustomization } from './themes'
 
 export const App = () => (
-  <ScrollTop>
-    <MappedRoutes />
-  </ScrollTop>
+  <ThemeCustomization>
+    <ScrollTop>
+      <MappedRoutes />
+    </ScrollTop>
+  </ThemeCustomization>
 )

@@ -1,8 +1,9 @@
 import { useRoutes } from 'react-router-dom'
-import { AppRoutes } from './App.routes'
+import { useAppRoutes } from './app.routes'
 
 export const MappedRoutes = () => {
-  const routes = useRoutes([AppRoutes])
+  const { appRoutes } = useAppRoutes()
+  const routes = useRoutes([appRoutes])
 
   return routes
 }
