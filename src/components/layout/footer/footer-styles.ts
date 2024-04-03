@@ -57,6 +57,7 @@ export const FooterMenu = styled('ul')(({ theme }) => ({
 
 export const MenuLink = styled(Link)<LinkProps>(({ theme }) => ({
   fontWeight: theme.typography.fontWeightBold,
+  textDecoration: 'none',
   color: grey[800],
 
   transition: '.2s ease',

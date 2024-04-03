@@ -4,6 +4,7 @@ import EmailRoundedIcon from '@mui/icons-material/EmailRounded'
 import { COLORS } from '@/styles'
 
 export const Container = styled('div')(({ theme }) => ({
+  background: theme.palette.grey[50],
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -22,7 +23,7 @@ export const Container = styled('div')(({ theme }) => ({
 }))
 
 export const FormWrapper = styled('div')(({ theme }) => ({
-  background: darken(theme.palette.primary.light, 0.2),
+  background: darken(theme.palette.primary.light, 0.1),
   padding: theme.spacing(2),
   borderRadius: theme.spacing(1.5),
 

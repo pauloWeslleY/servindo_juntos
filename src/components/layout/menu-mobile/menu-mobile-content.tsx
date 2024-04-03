@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import Box, { BoxProps as MuiBoxProps } from '@mui/material/Box'
+import Stack, { StackProps as MuiStackProps } from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography'
 import List from '@mui/material/List'
@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 
-type MenuMobileContentProps = MuiBoxProps & {
+type MenuMobileContentProps = MuiStackProps & {
   props: {
     label: string
     navItems: {
@@ -22,7 +22,7 @@ const MenuMobileContent = ({ props, ...rest }: MenuMobileContentProps) => {
   const navigate = useNavigate()
 
   return (
-    <Box {...rest} sx={{ textAlign: 'center' }}>
+    <Stack {...rest} sx={{ display: 'block', textAlign: 'center' }}>
       <Typography
         variant="h2"
         sx={(theme) => ({
@@ -47,7 +47,7 @@ const MenuMobileContent = ({ props, ...rest }: MenuMobileContentProps) => {
           </ListItem>
         ))}
       </List>
-    </Box>
+    </Stack>
   )
 }
 

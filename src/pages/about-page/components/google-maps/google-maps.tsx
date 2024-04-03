@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
 
 export const GoogleMaps = () => {
@@ -14,7 +14,7 @@ export const GoogleMaps = () => {
   }
 
   return (
-    <Box sx={{ height: '55vh' }}>
+    <Stack sx={{ height: '55vh', display: 'block' }}>
       {isLoaded ? (
         <GoogleMap
           mapContainerStyle={{ width: '100%', height: '100%' }}
@@ -26,6 +26,6 @@ export const GoogleMaps = () => {
       ) : (
         <span>Não foi possível carregar o google maps!</span>
       )}
-    </Box>
+    </Stack>
   )
 }

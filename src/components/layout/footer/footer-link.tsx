@@ -1,15 +1,14 @@
-import MuiBox, { BoxProps as MuiBoxProps } from '@mui/material/Box'
 import * as S from './footer-styles'
 
-type FooterLinkProps = MuiBoxProps & {
+type FooterLinkProps = {
   props: {
     text: string
     path: string
   }
 }
 
-export const FooterLink = ({ props, ...rest }: FooterLinkProps) => (
-  <MuiBox {...rest}>
+export const FooterLink = ({ props }: FooterLinkProps) => (
+  <li>
     <S.MenuLink to={props.path}>{props.text}</S.MenuLink>
-  </MuiBox>
+  </li>
 )

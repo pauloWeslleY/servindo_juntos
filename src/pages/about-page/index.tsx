@@ -1,12 +1,12 @@
-import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
 import { AboutUs, GoogleMaps } from './components'
 
 export const About = () => {
   return (
-    <Box
+    <Stack
       component="main"
-      sx={{ bgcolor: (theme) => theme.palette.primary.light }}
+      sx={{ display: 'block', bgcolor: (theme) => theme.palette.primary.light }}
     >
       <AboutUs.Root imageUrl="/image/bg3.jpg">
         <AboutUs.Content
@@ -35,6 +35,6 @@ export const About = () => {
           }}
         />
       </AboutUs.Root>
-    </Box>
+    </Stack>
   )
 }

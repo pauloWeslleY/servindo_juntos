@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
@@ -7,9 +7,9 @@ import * as S from './contacts-styles'
 
 export const Contact = () => {
   return (
-    <Box
+    <Stack
       component="main"
-      sx={{ bgcolor: (theme) => theme.palette.primary.light }}
+      sx={{ display: 'block', bgcolor: (theme) => theme.palette.primary.light }}
     >
       <S.Wrap>
         <header>
@@ -69,6 +69,6 @@ export const Contact = () => {
           </Button>
         </div>
       </S.Container>
-    </Box>
+    </Stack>
   )
 }

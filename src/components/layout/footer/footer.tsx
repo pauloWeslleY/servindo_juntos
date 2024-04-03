@@ -1,6 +1,6 @@
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import Stack from '@mui/material/Stack'
 import Grid from '@mui/material/Grid'
 import { grey } from '@mui/material/colors'
 import { FooterLink } from './footer-link'
@@ -10,7 +10,7 @@ import * as S from './footer-styles'
 const Title = ({ text }: { text: string }) => (
   <Typography
     component="h3"
-    variant="body2"
+    variant="h3"
     sx={(theme) => ({
       fontWeight: theme.typography.fontWeightBold,
       fontSize: theme.spacing(1.4),
@@ -26,14 +26,17 @@ export const Footer = () => {
 
   return (
     <>
-      <Box
+      <Stack
         component="footer"
-        sx={{ background: (theme) => theme.palette.primary.contrastText }}
+        sx={{
+          display: 'block',
+          background: (theme) => theme.palette.primary.contrastText,
+        }}
       >
         <S.MenuWrapper>
           <S.FooterMenu>
             {routesLinks.map((props) => (
-              <FooterLink key={props.path} component="li" props={props} />
+              <FooterLink key={props.path} props={props} />
             ))}
           </S.FooterMenu>
 
@@ -50,7 +53,7 @@ export const Footer = () => {
             <Title text="Quem Somos" />
           </Grid>
         </S.Wrapper>
-      </Box>
+      </Stack>
 
       <S.FooterBar>
         <Typography

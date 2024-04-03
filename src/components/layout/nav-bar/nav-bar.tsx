@@ -1,5 +1,5 @@
 import { lighten } from '@mui/material'
-import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
@@ -22,7 +22,7 @@ export const NavBar = (props: Props) => {
   })
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Stack>
       <ElevationScroll {...props}>
         <AppBar
           component="nav"
@@ -88,6 +88,6 @@ export const NavBar = (props: Props) => {
         </MenuMobile.Root>
       </nav>
       {children}
-    </Box>
+    </Stack>
   )
 }
