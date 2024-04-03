@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom'
-import { Layout } from '@/layout'
 import { Home, About, Contact, Gotas } from '@/pages'
+import { Layout } from '@/layout'
 
 export const useAppRoutes = () => {
   const appRoutes: RouteObject = {
