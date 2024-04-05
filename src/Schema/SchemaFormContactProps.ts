@@ -12,7 +12,7 @@ const schemaFormContact = z
     message: z.string().min(1, { message: 'Informe sua mensagem' }),
     terms: z.boolean(),
   })
-  .refine(fields => fields.terms === true, {
+  .refine((fields) => fields.terms === true, {
     path: ['terms'],
     message: 'Precisa aceita os termos',
   })

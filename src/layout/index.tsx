@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom'
-import { NavBar } from '@/components/NavBar'
-import { Footer } from '@/components/Footer'
-import { Toolbar } from './styles'
+import Toolbar from '@mui/material/Toolbar'
+import { NavBar, Footer } from '@/components/layout'
 
 export const Layout = () => {
   return (
