@@ -1,7 +1,7 @@
 export const useRoutesLink = () => {
   const routesLinks = [
     { text: 'Home', path: '/' },
-    { text: 'Gotas', path: '/devotional' },
+    { text: 'Gotas Bíblicas', path: '/drops' },
     { text: 'Contatos', path: '/contact' },
     { text: 'Sobre Nos', path: '/about' },
   ]

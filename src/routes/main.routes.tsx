@@ -8,7 +8,7 @@ export const useAppRoutes = () => {
     element: <Layout />,
     children: [
       { path: '/', element: <Home /> },
-      { path: '/devotional', element: <Gotas /> },
+      { path: '/drops', element: <Gotas /> },
       { path: '/contact', element: <Contact /> },
       { path: '/about', element: <About /> },
       { path: '*', element: <h1>Not found</h1> },
