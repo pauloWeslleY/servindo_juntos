@@ -46,6 +46,16 @@ const MenuMobileContent = ({ props, ...rest }: MenuMobileContentProps) => {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem
+          disablePadding
+          onClick={() =>
+            window.open('https://unidos-com-cristo.vercel.app', '_blank')
+          }
+        >
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemText primary="Login" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Stack>
   )
