@@ -14,7 +14,7 @@ export const Gotas = () => {
             color: theme.palette.primary.main,
           })}
         >
-          Devotional
+          Gotas
         </Typography>
         <span>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
