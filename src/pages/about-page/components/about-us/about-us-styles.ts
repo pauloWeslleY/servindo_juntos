@@ -50,7 +50,7 @@ export const Wrap = styled('div')(({ theme }) => ({
   color: COLORS.zinc[700],
 
   '& > h3': {
-    ...theme.typography.body2,
+    ...theme.typography.h3,
     fontSize: theme.spacing(1.75),
     color: theme.palette.primary.main,
 
