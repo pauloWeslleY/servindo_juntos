@@ -2,13 +2,14 @@ import { FormHTMLAttributes } from 'react'
 import Button from '@mui/material/Button'
 import { grey } from '@mui/material/colors'
 import { Input } from '@/components/ui'
-import { useForms } from './hook/useForm'
+import { useFormContact } from './hook/useFormContact'
 import * as S from './form-styles'
 
 type FormProps = FormHTMLAttributes<HTMLFormElement>
 
 export const Form = ({ ...props }: FormProps) => {
-  const { createContact, errors, handleSubmit, register, theme } = useForms()
+  const { createContact, errors, handleSubmit, register, theme } =
+    useFormContact()
 
   return (
     <S.Form {...props} onSubmit={handleSubmit(createContact)}>
