@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-const schemaFormContact = z
+export const schemaFormContact = z
   .object({
     name: z.string().min(1, { message: 'Informe seu nome!' }),
     lastName: z.string().min(1, { message: 'Informe seu sobrenome!' }),
@@ -16,8 +16,3 @@ const schemaFormContact = z
     path: ['terms'],
     message: 'Precisa aceita os termos',
   })
-
-type SchemaFormContactProps = z.infer<typeof schemaFormContact>
-
-export { schemaFormContact }
-export type { SchemaFormContactProps }

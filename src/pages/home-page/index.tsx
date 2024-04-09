@@ -10,7 +10,7 @@ export const Home = () => (
       <S.Content>
         <Typography
           component="h2"
-          variant="body2"
+          variant="h2"
           sx={(theme) => ({
             fontSize: theme.spacing(2.8),
             marginBottom: theme.spacing(0.8),

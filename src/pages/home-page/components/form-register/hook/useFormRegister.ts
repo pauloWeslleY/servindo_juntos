@@ -1,21 +1,20 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { SchemaFormProps, schemaForm } from '@/Schema/SchemaFormRegisterProps'
+import { FormRegisterProps } from '../types'
+import { schemaFormRegister } from '../schema'
 
 export const useFormRegister = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<SchemaFormProps>({
+  } = useForm<FormRegisterProps>({
     mode: 'all',
     reValidateMode: 'onChange',
-    resolver: zodResolver(schemaForm),
+    resolver: zodResolver(schemaFormRegister),
   })
 
-  console.log(errors)
-
-  const onSubmit = (data: SchemaFormProps) => {
+  const onSubmit = (data: FormRegisterProps) => {
     console.log({ data })
   }
 
