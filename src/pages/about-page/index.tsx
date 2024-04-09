@@ -1,6 +1,5 @@
 import Stack from '@mui/material/Stack'
-import Divider from '@mui/material/Divider'
-import { AboutUs, GoogleMaps } from './components'
+import { AboutUs } from './components'
 
 export const About = () => {
   return (
@@ -8,7 +7,7 @@ export const About = () => {
       component="main"
       sx={{ display: 'block', bgcolor: (theme) => theme.palette.primary.light }}
     >
-      <AboutUs.Root imageUrl="/image/bg3.jpg">
+      <AboutUs.Root>
         <AboutUs.Content
           props={{
             title: 'Aqui você pode contar mais sobre sua empresa.',
@@ -18,13 +17,17 @@ export const About = () => {
             description2: 'Adicione uma descrição',
           }}
         />
+
+        <AboutUs.Image>
+          <img src="/image/bg3.jpg" alt="thumbnail" />
+        </AboutUs.Image>
       </AboutUs.Root>
 
-      <Divider sx={{ borderColor: (theme) => theme.palette.primary.light }} />
-      <GoogleMaps />
-      <Divider sx={{ borderColor: (theme) => theme.palette.primary.light }} />
+      <AboutUs.Root>
+        <AboutUs.Image>
+          <img src="/image/bg3.jpg" alt="thumbnail" />
+        </AboutUs.Image>
 
-      <AboutUs.Root imageUrl="/image/bg3.jpg">
         <AboutUs.Content
           props={{
             title: 'Aqui você pode contar mais sobre sua empresa.',

@@ -20,6 +20,8 @@ export const Section = styled(MuiGrid)<MuiGridProps>(({ theme }) => ({
 }))
 
 export const Content = styled(MuiGrid)<MuiGridProps>(({ theme }) => ({
+  placeSelf: 'center',
+
   '& > img': {
     width: '100%',
     height: 'auto',
